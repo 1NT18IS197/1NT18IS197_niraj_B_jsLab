@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Color Picker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <div>
+        <form>
+            <label>Pick a color</label>
+            <input type="color" id="clr">
+            <br><br>
+            <input type="button" value="Add Contrast Color" id="submit">
+            <br><br>
+        </form>
+    </div>
+
+
+    <script>
+        var res = document.getElementById('submit');
+        res.addEventListener('click', () => {
+            let newDiv = document.createElement('div');
+            document.body.append(newDiv);
+            var r = (Math.floor(Math.random() * 256));
+            var g = (Math.floor(Math.random() * 256));
+            var b = (Math.floor(Math.random() * 256));
+            newDiv.style.height = "100px";
+            newDiv.style.width = "500px";
+
+            newDiv.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+
+
+            // console.log("rgb("+r+","+g+","+b+")")
+
+
+
+
+        })
+
+    </script>
+
+
+</body>
+
+</html>
